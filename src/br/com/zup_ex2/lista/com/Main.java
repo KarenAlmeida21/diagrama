@@ -9,10 +9,11 @@ public class Main {
         //correntista, o número da conta e o saldo. Crie um programa principal e demonstre a
         //utilização dos métodos implementados.
 
-        Conta_Bancaria vikkn = new Conta_Bancaria(7,900,"jail");
-        vikkn.deposito(100);
-        vikkn.saque(50);
-        vikkn.extrato();
+        Conta_Bancaria jood = new Conta_Bancaria();
+        jood.getNome_correntista("Ana");
+        jood.deposito(100);
+        jood.saque(50);
+        jood.extrato();
     }
 
 }

@@ -12,8 +12,6 @@ public class Conta_Bancaria {
     private String nome_correntista;
 
 
-
-
     public void setNumero_conta(int numero_conta) {
         this.numero_conta = numero_conta;
     }
@@ -22,9 +20,9 @@ public class Conta_Bancaria {
         this.numero_conta = numero_conta;
     }
 
-   // public void setSaldo(double saldo) {
-      //  this.saldo = saldo;
-   // }
+    // public void setSaldo(double saldo) {
+    //  this.saldo = saldo;
+    // }
 
     public void getSaldo(double saldo) {
         this.saldo = saldo;
@@ -37,11 +35,7 @@ public class Conta_Bancaria {
     public void getNome_correntista(String nome_correntista) {
         this.nome_correntista = nome_correntista;
     }
-    public Conta_Bancaria(int numero_conta, double saldo, String nome_correntista) {
-        this.numero_conta = numero_conta;
-        this.nome_correntista = nome_correntista;
-        this.saldo = saldo;
-    }
+
 
     public void saque(double valor_saque) {
         saldo = saldo - valor_saque;

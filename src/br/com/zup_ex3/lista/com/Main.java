@@ -14,10 +14,18 @@ public class Main {
         //dentro dele);
         //- Sobe : para subir um andar (não deve subir se já estiver no último andar);
         //- Desce : para descer um andar (não deve descer se já estiver no térreo);
-        Elevador edificio = new Elevador(4,20,10,5);
+       // Elevador edificio = new Elevador(4,20,10,5);
 
 
-        edificio.sobe(9);
+Elevador edificio = new Elevador(2,10,8,4);
+
+
+
+
+edificio.setAndarAtual(0);
+edificio.desce(0);
+
+
 
     }
 }

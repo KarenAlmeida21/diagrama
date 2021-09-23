@@ -3,16 +3,45 @@ package br.com.zup_ex3.lista.com;
 
 
     public class  Elevador {
-        int andarAtual=0;
-        int totalDeAndares;
-        int capacidade;
-        int qtdPessoasPresentes;
+      private   int andarAtual;
+      private   int totalDeAndares;
+      private   int capacidade;
+      private   int qtdPessoasPresentes;
+
+
 
         public Elevador(int andarAtual, int totalDeAndares, int capacidade, int qtdPessoasPresentes) {
             this.andarAtual = andarAtual;
             this.totalDeAndares = totalDeAndares;
             this.capacidade = capacidade;
             this.qtdPessoasPresentes = qtdPessoasPresentes;
+        }
+        public void setAndarAtual(int andarAtual){
+            this.andarAtual=andarAtual;
+        }
+public int getAndarAtual (int  andarAtual){
+            return andarAtual;
+
+}
+public void setTotalDeAndares( int totalDeAndares){
+            this.totalDeAndares=totalDeAndares;
+}
+public int getTotalDeAndares (int totalDeAndares){
+            return totalDeAndares;
+}
+public void setCapacidade(int capacidade){
+            this.capacidade=capacidade;
+}
+public int getCapacidade (int capacidade){
+             return capacidade;
+}
+
+        public void setQtdPessoasPresentes(int qtdPessoasPresentes) {
+            this.qtdPessoasPresentes = qtdPessoasPresentes;
+        }
+
+        public int getQtdPessoasPresentes (int qtdPessoasPresentes){
+            return qtdPessoasPresentes;
         }
 
         public void entra(int qtdPessoas) {
@@ -35,10 +64,10 @@ package br.com.zup_ex3.lista.com;
                 qtdPessoasPresentes = totalDeViajantes;
             }
         }
-//subir: criando metodo
+        //subir: criando metodo
         public void sobe (int andarDestino) {
             //  Sobe : para subir um andar (não deve subir se já estiver no último andar);
-            if( andarDestino <= totalDeAndares){
+            if( andarDestino  >= totalDeAndares   ){
                 System.out.println("Você está no " + andarAtual + " andar");
                 System.out.println("Subindo");
                 System.out.println("Você vai para o " + andarDestino + " andar");
@@ -49,7 +78,7 @@ package br.com.zup_ex3.lista.com;
 
         public void desce (int andarDestino){
             //- Desce : para descer um andar (não deve descer se já estiver no térreo);
-            if( andarDestino > andarAtual){
+            if( andarDestino <  andarAtual){
                 System.out.println("Você está no " + andarAtual + " andar");
                 System.out.println("Descendo");
                 System.out.println("Você vai para o " + andarDestino + " andar");
@@ -58,4 +87,6 @@ package br.com.zup_ex3.lista.com;
         }
 
     }
+    // Modifique o exercício 3 da aula anterior para utilizar modificadores de acessos, getters e setters
+// e também modifique o seu programa principal para se adequar à nova implementação.
 
