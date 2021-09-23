@@ -1,8 +1,9 @@
 package br.com.zup_ex3.lista.com;
 
 
+import org.w3c.dom.ls.LSOutput;
 
-    public class  Elevador {
+public class  Elevador {
       private   int andarAtual;
       private   int totalDeAndares;
       private   int capacidade;
@@ -67,18 +68,23 @@ public int getCapacidade (int capacidade){
         //subir: criando metodo
         public void sobe (int andarDestino) {
             //  Sobe : para subir um andar (não deve subir se já estiver no último andar);
-            if( andarDestino  >= totalDeAndares   ){
+            if( andarDestino  >= totalDeAndares & andarDestino > andarAtual  ){
                 System.out.println("Você está no " + andarAtual + " andar");
                 System.out.println("Subindo");
                 System.out.println("Você vai para o " + andarDestino + " andar");
                 andarAtual=andarDestino;
+            } if (andarDestino > totalDeAndares){
+                System.out.println("Não é possivel ir até andar  " + andarDestino );
+                System.out.println("Selecione um andar existente no edificio");
+            }else if (andarDestino < andarAtual){
+                System.out.println("Elevador subindo. Selecione um andar acima do seu atual ou selecione a opção descer.");
             }
 
         }
 
         public void desce (int andarDestino){
             //- Desce : para descer um andar (não deve descer se já estiver no térreo);
-            if( andarDestino <  andarAtual){
+            if( andarDestino <  andarAtual & andarDestino > 0){
                 System.out.println("Você está no " + andarAtual + " andar");
                 System.out.println("Descendo");
                 System.out.println("Você vai para o " + andarDestino + " andar");

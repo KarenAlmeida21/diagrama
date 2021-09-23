@@ -17,13 +17,13 @@ public class Main {
        // Elevador edificio = new Elevador(4,20,10,5);
 
 
-Elevador edificio = new Elevador(2,10,8,4);
+Elevador edificio = new Elevador(2,90,8,4);
 
 
 
 
-edificio.setAndarAtual(0);
-edificio.desce(0);
+edificio.setAndarAtual(8);
+edificio.desce(-8);
 
 
 
